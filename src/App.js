@@ -2,15 +2,21 @@ import React from 'react';
 import Navbar from './layout/navbar';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import ListUsers from './components/listUsers';
+import { Provider } from 'react-redux';
+import UserStore from './store';
 function App() {
   return (
-    <div className="App">
+    <Provider store={UserStore}>
+      <div className="App">
       <Navbar></Navbar>
       <div className="container">
-        <h3>sdqsdsqds</h3>
-        <p>qsdqsdsddddqsds</p>
+        <ListUsers></ListUsers>
       </div>
     </div>
+    </Provider>
+    
   );
 }
 
